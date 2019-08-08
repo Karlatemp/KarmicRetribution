@@ -1,0 +1,9 @@
+.checks>*{
+    display: block;
+}
+.checks>*>:first-child{
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    margin-right: 15px;
+}

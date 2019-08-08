@@ -1,0 +1,36 @@
+name: KarmicRetribution
+main: cn.mcres.karlatemp.plugins.kr.KarmicRetribution
+version: 1.0
+author: Karlatemp
+softdepend:
+- MXBukkitLib
+- SlimeFun
+- Residence
+- Essentials
+- EssentialsX
+- MythicMobs
+- PlaceholderAPI
+permissions:
+    kr.command:
+        default: true
+    kr.command.set.me:
+        default: op
+    kr.command.take.me:
+        default: op
+    kr.command.add.me:
+        default: op
+    kr.command.show.me:
+        default: true
+    kr.command.set.other:
+        default: op
+    kr.command.take.other:
+        default: op
+    kr.command.add.other:
+        default: op
+    kr.command.show.other:
+        default: op
+    kr.command.rm:
+        default: op
+commands:
+    kr:
+        permission: kr.command

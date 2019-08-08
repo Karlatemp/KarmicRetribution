@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KarmicRetribution PAPI Maker</title>
+    <link rel="stylesheet" href="/css/style.font.css">
+    <link rel="stylesheet" href="/css/theme.css">
+    <link rel="stylesheet" href="css\theme.css">
+    <script src="js/lang.js"></script>
+</head>
+
+<body>
+    <div class="showx">
+        <div class="header">
+            <div class="center">
+                <div class="name-nav pull-left item-show navbar-brand">
+                    Karlatemp - KarmicRetribution
+                </div>
+                <div class="buttons-nav pull-left">
+                    <a href="/index.html" class="item-show">Home</a>
+                    <a href="/projects.html" class="item-show item-active">Projects</a>
+                    <a href="/about.html" class="item-show">About</a>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div style="height: 80px"></div>
+            <div class="center">
+                <h1 class="mc-title text-center">KarmicRetribution PAPI Build</h1>
+                <h2 class="text-center">Fast build hold</h2>
+                <hr class="">
+                </hr>
+                <div class="page" id="page">
+                    <div class="checks">
+                        <div>
+                            <label for="hp">${message.enable.hp}</label><input type="checkbox" name="hp" id="hp">
+                        </div>
+                        <div>
+                            <label for="karma">${message.enable.karma}</label><input type="checkbox" name="karma"
+                                id="karma">
+                        </div>
+                        <div>
+                            <label for="lost">${message.enable.lost}</label><input type="checkbox" name="lost"
+                                id="lost">
+                        </div>
+                        <div>
+                            <label for="blod">${message.style.blod}</label><input type="checkbox" name="blod" id="blod">
+                        </div>
+                        <div>
+                            <label for="italic">${message.style.italic}</label><input type="checkbox" name="italic"
+                                id="italic">
+                        </div>
+                        <div>
+                            <label for="magic">${message.style.magic}</label><input type="checkbox" name="magic"
+                                id="magic">
+                        </div>
+                        <div>
+                            <label for="strikethrough">${message.style.strikethrough}</label><input type="checkbox"
+                                name="strikethrough" id="strikethrough">
+                        </div>
+                        <div>
+                            <label for="underline">${message.style.underline}</label><input type="checkbox"
+                                name="underline" id="underline">
+                        </div>
+                        <div>
+                            <label for="length">${message.enable.length}</label><input type="number" name="length"
+                                id="length" value="100">
+                        </div>
+                        <div>
+                            <span>${message.ending.msg}</span>
+                            <select name="ending" id="ending">
+                                <option value="-1">${message.ending.none}</option>
+                                <option value="0">${message.ending.black}</option>
+                                <option value="1">${message.ending.dark_blue}</option>
+                                <option value="2">${message.ending.dark_green}</option>
+                                <option value="3">${message.ending.dark_aqua}</option>
+                                <option value="4">${message.ending.dark_red}</option>
+                                <option value="5">${message.ending.dark_purple}</option>
+                                <option value="6">${message.ending.glod}</option>
+                                <option value="7">${message.ending.gray}</option>
+                                <option value="8">${message.ending.dark_gray}</option>
+                                <option value="9">${message.ending.blue}</option>
+                                <option value="10">${message.ending.green}</option>
+                                <option value="11">${message.ending.aqua}</option>
+                                <option value="12">${message.ending.red}</option>
+                                <option value="13">${message.ending.light_purple}</option>
+                                <option value="14">${message.ending.yellow}</option>
+                                <option value="15">${message.ending.white}</option>
+                                <option value="16">${message.ending.reset}</option>
+                            </select>
+                        </div>
+                        <div>
+                            <span><button id="b_load">${message.text.load}</button><button
+                                    id="b_gen">${message.text.generate}</button></span>
+                            <input type="text" id="area" />
+                        </div>
+                    </div>
+                    <span class="text-center display-block">/say ${message.color.a7line}</span>
+                    <span class="text-center display-block">/me ${message.color.essline}</span>
+                    <span class="text-right display-block" style="color:dimgrey">Are you watching me?</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footerwrap">
+                <div class="center">Hope always after the storm.</div>
+            </div>
+            <div class="copyright">
+                <div class="center">
+                    <strong>Copyright © 2019 <a href="/about.html">Karlatemp</a>.</strong>
+                    All rights reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        lopp(document);
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

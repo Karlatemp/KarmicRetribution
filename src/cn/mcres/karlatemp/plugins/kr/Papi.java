@@ -52,8 +52,8 @@ public class Papi extends PlaceholderExpansion {
             return null;
         }
         UUID uid = p.getUniqueId();
-        params = params.toLowerCase();
-        switch (params) {
+        String low = params.toLowerCase();
+        switch (low) {
             case "killcount":
             case "kc": {
                 return String.valueOf(KrAPI.getKillCounts(uid));
@@ -74,18 +74,34 @@ public class Papi extends PlaceholderExpansion {
         if (args.length > 2) {
             $2 = args[2];
         }
-        if ("nav".equals(type)) {
-            int length = 100;
-            if ($1 != null) {
-                length = Integer.decode($1);
+        switch (type.toLowerCase()) {
+            case "nav":
+                int length = 100;
+                if ($1 != null) {
+                    length = Integer.decode($1);
+                }
+                int flags = Tools.BUILD_ALL;
+                if ($2 != null) {
+                    flags = Integer.decode($2);
+                }
+                return Tools.createHpNav(p.getPlayer(), flags, length);
+            case "showifkarma": {
+                int karma = KrAPI.getKarma(uid).value;
+                return ww(karma != 0 ? $1 : $2);
             }
-            int flags = Tools.BUILD_ALL;
-            if ($2 != null) {
-                flags = Integer.decode($2);
+            case "showifkr": {
+                int karma = KrAPI.getKarma(uid).value;
+                return ww(karma != 0 || KrAPI.isKR(uid) ? $1 : $2);
             }
-            return Tools.createHpNav(p.getPlayer(), flags, length);
         }
         return null;
+    }
+
+    private String ww(String a) {
+        if (a == null) {
+            return "";
+        }
+        return a;
     }
 
     @Override

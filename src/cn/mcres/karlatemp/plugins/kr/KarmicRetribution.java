@@ -64,7 +64,7 @@ public class KarmicRetribution extends JavaPlugin {
                 }
             }
         }, 0, 0);
-        if (pm.isPluginEnabled("MXBukkitLib") && (!getConfig().getBoolean("noact"))) {
+        if (pm.isPluginEnabled("MXBukkitLib") && (!getConfig().getBoolean("noact", false))) {
             HpShow.go = new TINFO();
         }
         s.getScheduler().runTaskTimer(this, new HpShow(), 5, 5);
